@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/avif" href="image.avif">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+</head>
+<body>
+    <h1>Translator</h1>
+
+    <form id="translatorForm" class="form-container">
+        <div class="first">
+            <label for="source_language">Source Language:</label>
+            <select id="source_language" name="source_language" required>
+                <!-- Options will be populated here -->
+            </select>
+            <div class="text-area">
+                <label for="text_to_translate">Text:</label>
+                <input type="text" id="text_to_translate" name="text_to_translate" required placeholder="Enter text here...">
+            </div>
+        </div>
+        
+        <div class="second">
+            <label for="target_language">Target Language:</label>
+            <select id="target_language" name="target_language" required>
+            </select>
+            <div class="translation-result">
+                <label for="translationResult">Translation:</label>
+                <div id="translationResult"></div>
+            </div>
+        </div>
+        
+        <button type="submit">Translate</button>
+    </form>
+
+    <script src="script/language.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>

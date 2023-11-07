@@ -1,0 +1,128 @@
+/* style.css */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: #f7f7f7;
+}
+
+#translatorForm {
+    box-shadow: 10px 10px 5px lightblue;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 40px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    padding: 20px 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows the button to sit on its own row */
+    height: calc(100vh - 100px);
+    /* Adjust height based on the header and any additional padding/margin you may have */
+    padding: 20px;
+    box-sizing: border-box;
+    /* Include padding in the element's total width and height */
+    max-width: 1000px;
+    /* Max width can be adjusted as needed */
+    margin: 0 auto;
+}
+
+.first,
+.second {
+    padding: 3px;
+    height: 0;
+    flex: 1;
+    /* Each section takes equal width */
+    min-width: 40%;
+    /* Minimum width of each side to prevent collapsing in smaller screens */
+    box-sizing: border-box;
+    /* Include padding in the element's total width and height */
+}
+
+.first {
+    margin-right: 30px;
+}
+
+.text-area,
+.translation-result {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#text_to_translate {
+    padding: 3px;
+    width: 100%;
+    text-align: justify;
+    height: 150px;
+    resize: vertical;
+}
+
+#source_language {
+    margin-left: 5px;
+}
+
+select,
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#translationResult {
+    border: 1px solid #ccc;
+    padding: 5px;
+    height: 150px;
+    overflow: auto;
+    border-radius: 4px;
+}
+
+button {
+    padding: 15px 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    height: 50px;
+    width: 100%;
+    /* Button takes the full width */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+
+    .first,
+    .second {
+        min-width: 100%;
+        /* Each section takes full width on smaller screens */
+    }
+
+    .form-container {
+        height: auto;
+    }
+}
